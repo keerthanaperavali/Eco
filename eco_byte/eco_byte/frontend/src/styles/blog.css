@@ -1,0 +1,85 @@
+body{
+  background:  #f8fdf8
+}
+.blog-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.blog-title {
+font-size: 2.5rem;
+  font-weight: 800;
+  margin: 55px 0px 10px;
+  color: #075566;
+}
+
+.blog-subtitle {
+  font-size: 1rem;
+  color:  #39832E;
+  margin-bottom: 30px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+  color: #39832e;
+}
+
+.blog-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.read-btn {
+  padding: 8px 14px;
+  background: linear-gradient(to right, #254b62, #244e3c);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.read-btn:hover {
+  background: #39832E;
+}

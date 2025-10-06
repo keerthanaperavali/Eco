@@ -1,0 +1,261 @@
+.steps-container {
+  position: relative;
+  width: 100%;
+  padding: 40px 5vw 60px 5vw;
+  background: #c3f0af;
+  color: #075566;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 480px;
+}
+
+.steps-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #075566;
+}
+
+.steps-line {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 3.5px;
+  margin: 40px auto 60px;
+  background: #dce7dc;
+  border-radius: 2px;
+}
+
+.steps-progress {
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  transition: width 0.2s, height 0.2s;
+  top: 0; 
+  left: 0;
+  z-index: 1;
+  width: 0;
+}
+
+.step-number {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  z-index: 2;
+}
+
+.step-number .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #39832e;
+  background: #fff;
+  color: #39832e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(42, 98, 52, 0.09);
+  transition: border 0.2s, color 0.2s, background 0.2s;
+}
+
+.step-number.active .circle,
+.step-number.passed .circle {
+  border-color: #2e7d32;
+  background: #2e7d32;
+  color: #fff;
+}
+
+.steps-items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.step {
+  flex: 1;
+  min-width: 180px;
+  max-width: 240px;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+  opacity: 0.6;
+  transition: opacity 0.2s, color 0.2s;
+  margin-bottom: 20px;
+}
+
+.step.active {
+  opacity: 1;
+  color: #2e7d32;
+}
+
+.step-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid #39832e;
+  background: rgba(57, 131, 46, 0.1);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #075566;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  color: #39832e;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+
+.step ul {
+  list-style-type: disc;
+  margin: 0.6rem 0 0 1.5rem;
+  padding: 0;
+}
+
+.step li {
+  font-size: 1rem;
+  color: #075566;
+  margin-bottom: 8px;
+}
+
+/* --- Responsive: Vertical Stepper on Mobile --- */
+@media (max-width: 768px) {
+  /* Stack steps vertically */
+  .steps-items {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+    gap: 36px;
+  }
+
+  /* Vertical progress line on left */
+  .steps-line {
+    position: absolute;
+    left: 24px;
+    top: 88px;
+    width: 3.5px !important;
+    height: 220px !important; /* shorter vertical line */
+    margin: 0;
+    background: #dce7dc;
+    max-width: unset;
+    border-radius: 2px;
+  }
+
+  /* Vertical progress fill */
+  .steps-progress {
+    width: 100% !important;
+    height: 0;
+    background: linear-gradient(180deg, #4caf50, #2e7d32);
+    left: 0;
+    transition: height 0.3s ease;
+  }
+
+  /* Position step numbers on vertical line */
+  .step-number {
+    position: absolute;
+    left: 0;
+    top: unset;
+    transform: translate(-50%, 0);
+  }
+
+  /* Step container adjustments */
+  .step {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding-left: 60px; /* spacing to the right of line */
+    text-align: left;
+    position: relative;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+  }
+
+  /* Increase opacity on active step */
+  .step.active {
+    opacity: 1;
+    color: #2e7d32;
+  }
+
+  /* Step icon smaller and shifted left */
+  .step-icon {
+    margin: 0 0 12px -38px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    border-width: 1.8px;
+  }
+
+  /* Title and description indentation */
+  .step h3,
+  .step ul {
+    margin-left: 0;
+  }
+
+  /* Description list adjustments */
+  .step ul {
+    padding-left: 20px;
+  }
+
+  /* Step number circles: stack next to steps vertically */
+  .step-number .circle {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1024px) {
+  /* Hide line and step number circles on tablet & mobile */
+  .steps-line,
+  .step-number {
+    display: none !important;
+  }
+
+  /* Center the main steps wrapper in mobile/tablet */
+  .steps-items {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 36px;
+    width: 100%;
+  }
+
+  .step {
+    max-width: 90vw;
+    width: 100%;
+    text-align: center !important;
+    padding-left: 0 !important;
+    margin-bottom: 20px;
+    opacity: 1;
+  }
+
+  .step-icon {
+    margin: 0 auto 14px auto !important;
+    left: 0 !important;
+    font-size: 2rem;
+  }
+
+  .step h3,
+  .step ul {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+
+  .step ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 22px;
+    margin: 0 auto;
+  }
+}
+

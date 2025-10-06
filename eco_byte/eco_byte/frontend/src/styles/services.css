@@ -1,0 +1,384 @@
+.services-page {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  background: #f8fdf8;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.hero-section h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.cta-btn:hover {
+  background: #1b5e20;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 10%;
+}
+.about-text {
+  flex: 1;
+  text-align: justify;
+ 
+}
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #224A54;
+  
+}
+.about-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+}
+
+/* Why EcoByte Section */
+.why-ecobyte {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f0fff4, #e8fdf5);
+  text-align: center;
+}
+
+.why-ecobyte h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #046c4e;
+  margin-bottom: 50px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Grid Layout */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Card Styling */
+.why-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.why-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Icon Styling */
+.why-card span {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: #e6f8ed;
+  padding: 18px;
+  border-radius: 50%;
+  color: #046c4e;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.why-card:hover span {
+  background: #046c4e;
+  color: #fff;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #224A54;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-ecobyte h2 {
+    font-size: 2rem;
+  }
+  .why-card {
+    padding: 25px 18px;
+  }
+  .why-card span {
+    font-size: 2rem;
+    padding: 14px;
+  }
+}
+
+
+/* Who Can Sell */
+.who-section {
+  text-align: center;
+  padding: 60px 30px;
+  background: #f9fff9;
+}
+
+.who-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  padding: 0 10px;
+}
+
+.who-card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.who-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.who-card:hover .who-card-inner {
+  transform: rotateY(180deg);
+}
+
+.who-card-front,
+.who-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+}
+
+.who-card-front {
+  font-size: 1rem;
+}
+
+.who-card-front .who-icon {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.who-card-back {
+  transform: rotateY(180deg);
+  background: #fff;
+  overflow: hidden;
+}
+
+.who-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+/* Donate Section */
+.donate-section {
+  text-align: center;
+  padding: 70px 20px;
+}
+.donate-section .impact {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.difference-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: #f7fbf9;
+}
+
+.difference-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #2d6a4f;
+}
+
+.difference-section p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.difference-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.diff-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.diff-card:hover {
+  transform: translateY(-6px);
+}
+
+.before, .after {
+  padding: 20px;
+}
+
+.before {
+  background: #ffe5e5;
+  border-bottom: 2px solid #ddd;
+}
+
+.after {
+  background: #e6f8ed;
+}
+
+
+/* CTA Section */
+.cta-section {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  background: url("https://images.squarespace-cdn.com/content/v1/6063fb56ece40577795aaa5f/20fe33a3-8425-41fd-b8cf-2811651ca473/iStock-1372577388.jpg")
+    center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Glass overlay */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(195, 246, 200, 0.25); /* soft green overlay */
+ /* semi-transparent */
+  backdrop-filter: blur(4px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+}
+
+/* Keep text above the glass */
+.cta-section * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Call to Action Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background: #2e7d32;   /* same green as home */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  
+}
+
+.cta-btn:hover {
+  background: #1b5e20;   /* darker green on hover */
+  transform: scale(1.05);
+}
+
+
+
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .who-cards {
+    grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
+  }
+
+  .who-card-inner {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .who-cards {
+    grid-template-columns: 1fr; /* stack cards on mobile */
+  }
+
+  .who-card-inner {
+    min-height: 180px;
+  }
+
+  .who-card-front {
+    font-size: 0.9rem;
+  }
+
+  .who-card-front .who-icon {
+    font-size: 28px;
+  }
+}
+
+/* Responsive: About Section (Who We Are) */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* stack vertically */
+    text-align: center;
+  }
+
+  .about-img {
+    order: -1; /* image goes first */
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-img img {
+    max-width: 250px; /* smaller size for mobile */
+  }
+}

@@ -1,0 +1,265 @@
+/* Glassmorphism Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background: rgba(36, 78, 60, 0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.company-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.company-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #4caf50);
+}
+
+.company-name {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Links - Desktop Default */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #c8f1d6;
+}
+
+.navbar-links .active {
+  font-weight: bold;
+  color: #064420; /* Dark Green */
+}
+
+.navbar-actions {
+  position: relative;      /* ensure dropdown stacks above other nav content */
+  z-index: 1001;
+}
+
+.profile-menu {
+  position: relative;      /* anchor for the absolute dropdown */
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  font-size: 26px;         /* keep close to your base sizing */
+  color: white;
+  cursor: pointer;
+  margin-right: 20px; 
+}
+
+/* The dropdown panel */
+.dropdown {
+  position: absolute;
+  top: 46px;               /* drop just below the icon */
+  right: 0;
+  width: 230px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+
+  /* use your existing theme colors */
+  background: rgba(36, 78, 60, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: -2px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1100;           /* above overlay (999) and navbar (1000) */
+}
+
+.dropdown li {
+  padding: 10px 14px;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.dropdown li:hover {
+  /* keep to your palette */
+  background: #39832E;
+  color: white;
+}
+
+/* If dropdown items are links, inherit color + full width click */
+.dropdown li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px; 
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-actions .icon:hover {
+  color: #c8f1d6;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #4caf50);
+}
+
+/* Buttons */
+.login-btn {
+  background: linear-gradient(to right, #254b62, #244e3c) !important;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #39832E !important;
+}
+
+.book-btn {
+  background: linear-gradient(to right, #254b62, #244e3c);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px;
+}
+
+.book-btn:hover {
+  opacity: 0.9;
+  background: #39832E;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 32px; /* bigger size */
+  cursor: pointer;
+  margin-right: 12px; /* spacing from edge */
+  z-index: 1002;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Tablet Fix */
+@media (max-width: 1023px) {
+  .navbar-links {
+    gap: 20px;
+  }
+}
+
+/* Mobile Sidebar */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    height: 100vh;
+    width: 250px;
+    background:  #2e7d32;
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-left: 20px;
+    gap: 25px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.3);
+    z-index: 1001;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  /* Hide desktop actions */
+  .navbar-actions {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Sidebar links */
+  .navbar-links li a,
+  .navbar-links li button {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-links li a:hover,
+  .navbar-links li button:hover {
+    color: #c8f1d6;
+  }
+}

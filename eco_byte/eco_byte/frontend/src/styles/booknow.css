@@ -1,0 +1,173 @@
+body {
+  background: #f8fdf8;
+  padding-top: 60px;
+}
+
+.booknow-bg {
+  min-height: 100vh;
+  background: #f8fdf8;
+  width: 100%;
+  position: relative;
+}
+
+.booknow-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+.booknow-form {
+  background: #fff;
+  padding: 32px 32px 32px 32px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 24px rgba(34, 131, 46, 0.07);
+  width: 440px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.address-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #39832E;
+}
+
+.add-address {
+  color: #5c2e91;
+  text-decoration: underline;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pickup-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+.pickup-options label {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #39832E;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #39832E;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #e7ece2;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f8fdf8;
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #224A54, #1d3b1a);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #39832E;
+}
+
+.error {
+  color: #d04444;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.booking-note {
+  font-size: 14px;
+  color: #39832E;
+  margin-top: 18px;
+  line-height: 1.4;
+  max-width: 440px;
+  text-align: left;
+}
+
+.booking-note strong {
+  font-weight: 600;
+}
+
+.booking-note a {
+  color: #224A54;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .booknow-center {
+    padding-top: 8px;
+  }
+
+ 
+
+  .booknow-form {
+    width: 96vw;
+    padding: 14px 5vw 18px 5vw;
+    border-radius: 13px;
+    box-sizing: border-box;
+  }
+
+  .address-header h2 {
+    font-size: 17px;
+  }
+
+  .pickup-options {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+}
+input.input-error,
+textarea.input-error,
+select.input-error {
+  border-color: #d04444;
+}

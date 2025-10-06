@@ -1,0 +1,118 @@
+.booknow-container {
+  max-width: 500px;
+  margin: 100px auto; /* centered horizontally */
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.booknow-container:hover {
+  transform: translateY(-2px);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 55px 0 10px;
+  color: #075566;
+  text-align: center;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #39832E;
+}
+
+.address-form input,
+.address-form select,
+.address-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.address-form input:focus,
+.address-form select:focus,
+.address-form textarea:focus {
+  border-color: #075566;
+}
+
+.address-form textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(to right, #254b62, #244e3c);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #39832E;
+}
+
+/* Responsive Design */
+
+/* Laptops and Tablets */
+@media (max-width: 1024px) {
+  .booknow-container {
+    max-width: 450px;
+    margin: 80px auto;
+    padding: 20px;
+  }
+  .title {
+    font-size: 2.2rem;
+    margin: 40px 0 10px;
+  }
+  .address-form input,
+  .address-form select,
+  .address-form textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .save-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .booknow-container {
+    max-width: 95%;
+    margin: 60px auto;
+    padding: 15px;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 30px 0 10px;
+  }
+  .address-form input,
+  .address-form select,
+  .address-form textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

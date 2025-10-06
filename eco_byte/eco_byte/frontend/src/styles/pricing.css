@@ -1,0 +1,197 @@
+/* Container */
+.pricing-container {
+  padding: 40px 20px;
+  background: #f8fdf8;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #075566;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280px; /* Default height */
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.product-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text */
+.product-name {
+  font-size: 18px;
+  margin: 12px 0 8px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Container */
+.pricing-container {
+  padding: 40px 20px;
+  background: #f8fdf8;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #075566;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280px; /* Default height */
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.product-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text */
+.product-name  { 
+  font-size: 24px  ;   /* Increased */ 
+  font-weight: 700;  /* Bolder */
+  margin: 12px 0 8px;
+  color: #222;       /* Slightly darker for better readability */
+} 
+
+.product-price {
+  font-size: 18px;   /* Increased */
+  font-weight: 700;  /* More emphasis */
+  color: #1a7a24;    /* Richer green */
+  margin-top: 5px;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* 💻 Laptop/Desktop (3 cards per row) */
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-card {
+    height: 260px; /* smaller */
+    max-width: 260px;
+  }
+  .product-img {
+    height: 120px;
+  }
+}
+
+/* 📱 Tablet (2 cards per row) */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-card {
+    height: 270px;
+    max-width: 260px;
+  }
+}
+
+
+/* 📱 Mobile (1 card per row, centered) */
+@media (max-width: 599px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-card {
+    width: 90%;
+    max-width: 300px;
+    height: auto; /* flexible height */
+  }
+  .product-img {
+    height: 130px;
+  }
+}
+
+/* 💻 Laptop/Desktop (3 cards per row) */
+@media (min-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .product-card {
+    height: 260px; /* smaller */
+    max-width: 300px;
+  }
+  .product-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 599px) {
+  .product-name {
+    font-size: 22px;  /* Slightly larger on small screens */
+  }
+  .product-price {
+    font-size: 20px;  /* Bigger on mobile for easy reading */
+  }
+}

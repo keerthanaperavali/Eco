@@ -1,0 +1,295 @@
+/* Page container */
+.address-container {
+  max-width: 900px;
+  margin: 80px auto; /* Slightly less top margin for balance */
+  padding: 24px 28px;
+  background: #fefefe; /* Brighter white for cleaner look */
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.12); /* Softer but richer shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.address-container:hover {
+  box-shadow: 0 10px 36px rgba(46, 125, 50, 0.2);
+}
+
+/* Header + Add Button */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px; /* Wider gap */
+  margin-bottom: 24px;
+  flex-wrap: wrap; /* For responsiveness */
+}
+
+.header h2 {
+  color: #39832E;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.add-btn {
+  background: linear-gradient(90deg, #224A54, #1d3b1a);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgb(39 124 7 / 0.3);
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  background: #39832E;
+  box-shadow: 0 6px 16px rgb(45 142 20 / 0.45);
+}
+
+/* Cards */
+.address-list {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.address-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 18px rgba(85, 169, 89, 0.18);
+  transition: box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+.address-card:hover {
+  box-shadow: 0 10px 26px rgba(39, 132, 15, 0.3);
+}
+
+.address-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2e7d32;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+.address-card p {
+  margin: 4px 0 18px 0;
+  color: #484848;
+  font-size: 1.04rem;
+  line-height: 1.4;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Edit / Delete Buttons */
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.edit-btn {
+  background: #4db34d;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #39832E;
+  box-shadow: 0 6px 20px #337533cc;
+}
+
+.delete-btn {
+  background: #ea5555;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d33c3c;
+  box-shadow: 0 6px 20px #a92a2acc;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right:0; bottom:0;
+  background-color: rgba(38, 123, 27, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1050;
+}
+
+/* Modal Container */
+.booknow-container {
+  background: #fff;
+  padding: 32px 28px 24px;
+  border-radius: 18px;
+  width: 480px;
+  max-width: 100%;
+  box-shadow: 0 0 22px 8px rgba(36, 118, 24, 0.22);
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal Title */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c6a2c;
+  margin-bottom: 22px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Form Styles */
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2b2b2b;
+}
+
+.address-form input,
+.address-form select,
+.address-form textarea {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.8px solid #b8d5b8;
+  transition: border-color 0.3s ease;
+  outline: none;
+  resize: vertical;
+}
+
+.address-form input:focus,
+.address-form select:focus,
+.address-form textarea:focus {
+  border-color: #3e8f3e;
+  box-shadow: 0 0 8px #3e8f3e88;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.save-btn {
+  background: linear-gradient(90deg, #2d752d, #70ae2f);
+  color: #f1f7f1;
+  box-shadow: 0 2px 14px #489838cc;
+}
+
+.save-btn:hover {
+  background: linear-gradient(90deg, #1e5a1e, #4d811e);
+  box-shadow: 0 4px 22px #326b1722;
+}
+
+.cancel-btn {
+  background: #dedede;
+  color: #444;
+}
+
+.cancel-btn:hover {
+  background: #c2c2c2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .address-container {
+    margin: 40px 18px;
+    padding: 18px 20px;
+  }
+
+  .booknow-container {
+    width: 100%;
+    padding: 26px 20px;
+  }
+
+  .address-list {
+    display: block;
+  }
+
+  .address-card {
+    padding: 18px 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .header h2 {
+    font-size: 2rem;
+  }
+
+  .add-btn {
+    font-size: 1rem;
+    padding: 10px 18px;
+    box-shadow: 0 2px 10px rgba(56,142,23,0.25);
+  }
+
+  .save-btn,
+  .cancel-btn {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+}

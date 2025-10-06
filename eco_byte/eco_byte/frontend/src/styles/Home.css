@@ -1,0 +1,344 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 140px 40px 150px; /* desktop spacing */
+  min-height: calc(100vh - 0px);
+  color: #fff;
+  gap: 40px;
+  flex-wrap: nowrap;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Left Content */
+.home-left {
+  flex: 1;
+  max-width: 600px;
+  min-width: 280px;
+}
+
+.tagline {
+  background-color: rgba(45, 58, 31, 0.8);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 15px 0 10px;
+  color: #39832E;
+}
+
+.home-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #075566;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-pricing,
+.btn-whatsapp,
+.btn-quote {
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+  background: linear-gradient(90deg, #224A54, #1d3b1a);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-pricing:hover,
+.btn-whatsapp:hover,
+.btn-quote:hover {
+  opacity: 0.9;
+}
+
+.whatsapp-icon {
+  font-size: 1.2rem;
+}
+
+/* Booking Box */
+.booking-box {
+  flex: 0 1 350px;
+  width: 100%;
+  max-width: 350px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.booking-box h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.booking-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-box input,
+.booking-box textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.booking-box button {
+  padding: 12px;
+  background: linear-gradient(90deg, #224A54, #1d3b1a);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS*/
+/* ===================== */
+
+/* Large laptops */
+@media (max-width: 1200px) {
+  .home-container {
+    padding: 100px 80px 40px;
+    gap: 30px;
+  }
+  .home-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 40px;
+  }
+
+  .home-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .button-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .booking-box {
+    margin-top: 30px;
+    max-width: 450px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 1.9rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-container {
+    padding: 120px 20px 30px;
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn-pricing,
+  .btn-whatsapp {
+    flex: 1 1 45%; /* 2 per row */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.6rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .booking-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .btn-pricing,
+  .btn-whatsapp,
+  .btn-quote {
+    flex: 1 1 100%; /* full width buttons */
+  }
+}
+.pincode-checker-section {
+  margin: 60px auto 40px;
+  max-width: 400px;
+  text-align: center;
+  background: white;
+  border-radius: 14px;
+  padding: 28px 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.pincode-checker-section h2 {
+  font-size: 22px;
+  color: #39832E;
+  margin-bottom: 18px;
+}
+
+.pincode-form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.pincode-form input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1.7px solid  #f8fdf8;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  max-width: 250px;
+}
+
+.pincode-form input:focus {
+  border-color: #39832E;
+}
+
+.verify-btn {
+  padding: 12px 22px;
+  background: linear-gradient(90deg, #224A54, #1d3b1a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.verify-btn:hover {
+  background: #396c41;
+}
+
+.available-text {
+  margin-top: 16px;
+  color: #39832E;
+  font-weight: 600;
+}
+
+.not-available-text {
+  margin-top: 16px;
+  color: #d04646;
+  font-weight: 600;
+}
+
+/* Why EcoByte Section */
+.why-ecobyte {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9); /* soft background */
+  text-align: center;
+}
+
+.why-ecobyte h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1f2937; /* neutral dark gray */
+}
+
+/* Grid Layout */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual Cards */
+.why-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon */
+.why-card span {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.why-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827; /* dark neutral */
+}
+
+/* Description */
+.why-card p {
+  font-size: 0.95rem;
+  color: #4b5563; /* softer gray */
+  line-height: 1.5;
+}
